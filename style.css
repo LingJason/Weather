@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -19,13 +21,13 @@ body {
   align-items: center;
 }
 
-.header left {
+.header-left {
   display: flex;
   width: 50%;
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-right: 2px solid hsl(200, 100%, 10%);
 }
 
@@ -112,5 +114,3 @@ body {
 .hour-row > td {
   padding: 0.25rem 0.5rem;
 }
-
-

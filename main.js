@@ -2,11 +2,19 @@ import "./style.css"
 import { getWeather } from "./weather"
 import { ICON_MAP } from "./iconMap"
 
-getWeather(10, 10, Intl.DateTimeFormat().resolvedOptions().timeZone)
+navigator.geolocation.getCurrentPosition(success, error)
+
+function success({coordinates}) {
+getWeather(
+  coordinates.latitude,
+  coordinates.longitude,
+  Intl.DateTimeFormat().resolvedOptions().timeZone
+  )
 .then(renderWeather)
 .catch(err => {
   console.log(err.message)
 })
+}
 
 function renderWeather({current, daily, hourly}) {
   renderCurrentWeather(current)

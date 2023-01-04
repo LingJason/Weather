@@ -16,6 +16,12 @@ getWeather(
 })
 }
 
+function error() {
+  alert(
+    "There was an error trying to retrieve your location. Please allow us to use your location and refresh the page."
+  )
+}
+
 function renderWeather({current, daily, hourly}) {
   renderCurrentWeather(current)
   renderDailyWeather(daily)
